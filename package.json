@@ -1,0 +1,44 @@
+{
+  "name": "m9r-plugin-sdk",
+  "type": "commonjs",
+  "version": "0.0.0",
+  "description": "Library for making M9r music player plugins",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/lib/index.d.ts",
+      "default": "./dist/lib/index.js"
+    }
+  },
+  "files": [
+    "dist/lib"
+  ],
+  "scripts": {
+    "prepare": "npm run clean && npm run build",
+    "clean": "npx rimraf dist",
+    "build": "npx tsc",
+    "test": "npx jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/decarbonization/m9r-plugin-sdk.git"
+  },
+  "keywords": [
+    "m9r"
+  ],
+  "author": "Peter Kevin Contreras",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/decarbonization/m9r-plugin-sdk/issues"
+  },
+  "homepage": "https://github.com/decarbonization/m9r-plugin-sdk#readme",
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "jest": "^29.7.0",
+    "rimraf": "^6.0.1",
+    "ts-jest": "^29.2.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
